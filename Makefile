@@ -1,7 +1,7 @@
 ANTLR4_CPP_RUNTIME_DIR=/usr/local/include/antlr4-runtime
 ANTLR4_CPP_LIB_DIR=/usr/local/lib
 ANTLR4_CPP_LIB=antlr4-runtime
-CPP=clang++
+CPP=g++
 CPP_FILES := $(wildcard *.cpp)
 OBJ_FILES := $(addprefix ,$(notdir $(CPP_FILES:.cpp=.o)))
 CPPFLAGS=-Wall

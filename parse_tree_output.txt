@@ -386,3 +386,57 @@ prog
  end
  .
  <EOF>
+-------------------------------
+SIC/XE INSTRUCTION SET:
+
+START TestInput
+DC constValue,42
+DC constString,Hello, World!
+DS globalVar,myInteger
+DS arr,myArray
+DS arrOfArrs,arrayOfArrays
+DS a,integer
+DS b,integer
+DS max,integer
+DS localVar,myInteger
+LDX a
+LDX b
+ADD
+STX localVar
+LDX localVar
+STX addNumbers
+LDX a
+LDX b
+MUL
+STX multiplyNumbers
+MAIN:
+LDA ZERO
+STA RETADR
+JSUB TestInput
+LDX 5
+STX a
+LDX 10
+STX b
+LDX a
+LDX b
+JZ ELSE1
+IF0:
+LDX a
+JMP ENDIF2
+ELSE1:
+LDX b
+STX max
+ENDIF2:
+LDCH The maximum value is: 
+LDX max
+LDX constValue
+STX globalVar
+LDX myInteger
+LDX globalVar
+STX myInteger
+LDCH Result: 
+LDX 1
+LDX 1
+LDA RETADR
+RSUB
+END

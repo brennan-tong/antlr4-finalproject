@@ -1,0 +1,20 @@
+* Assignment 7 
+
+* Prereqs 
+- Ubuntu 22.04.2 LTS x86_64
+- g++ 11.3.0
+
+  
+* Build 
+
+#+begin_src shell
+make 
+#+end_src
+
+* Usage 
+
+
+#+begin_src shell
+./prog >> parse_tree_output.txt 
+#+end_src
+
