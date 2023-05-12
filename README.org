@@ -12,7 +12,7 @@ make
 #+end_src
 
 * Usage 
-
+Input file: =test-in.txt=
 
 #+begin_src shell
 ./prog >> parse_tree_output.txt 
