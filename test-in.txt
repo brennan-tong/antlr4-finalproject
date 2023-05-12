@@ -1,0 +1,44 @@
+program TestInput;
+const
+  constValue = 42;
+  constString = 'Hello, World!';
+
+type
+  myInteger = integer;
+  myArray = array [1..5] of myInteger;
+  arrayOfArrays = array [1..2] of myArray;
+
+var
+  globalVar: myInteger;
+  arr: myArray;
+  arrOfArrs: arrayOfArrays;
+  a, b, max: integer;
+
+function addNumbers(a, b: myInteger): myInteger;
+var
+  localVar: myInteger;
+begin
+  localVar := a + b;
+  addNumbers := localVar;
+end;
+
+function multiplyNumbers(a, b: myInteger): myInteger;
+begin
+  multiplyNumbers := a * b;
+end;
+
+begin
+  a := 5;
+  b := 10;
+
+  if a > b then
+    max := a
+  else
+    max := b;
+
+  writeln('The maximum value is: ', max);
+  globalVar := constValue;
+  myInteger := multiplyNumbers(myInteger, globalVar);
+  writeln('Result: ', arrOfArrs[1][1]);
+end.
+
